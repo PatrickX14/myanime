@@ -3,7 +3,7 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import { NarutoCard } from "../../components/NarutoCard";
 
-interface NartuoPropsType {
+export interface NartuoPropsType {
   type: "clan" | "singlecharacter" | "multiplecharacter";
 }
 
@@ -24,13 +24,19 @@ export const NartuoLoader = async () => {
   }
 };
 
-export const NarutoPage: React.FC<NartuoPropsType> = () => {
+export const NarutoPage: React.FC<NartuoPropsType> = (props) => {
   const { data }: any = useLoaderData();
   // console.log(location);
 
   return (
     <>
-      <NarutoCard single={true} data={data} />
+      {props.type === "clan" ? (
+        <NarutoCard single={true} data={data} type={"clan"} />
+      ) : props.type === "singlecharacter" ? (
+        <NarutoCard single={true} data={data} type={"singlecharacter"} />
+      ) : (
+        <NarutoCard single={true} data={data} type={"clan"} />
+      )}
     </>
   );
 };

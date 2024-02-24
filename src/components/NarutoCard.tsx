@@ -1,8 +1,9 @@
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { Card, Row, Image, Col } from "antd";
 import React from "react";
+import { NartuoPropsType } from "../pages/naruto/Naruto";
 
-interface CardType {
+interface CardType extends NartuoPropsType {
   data: {
     characters: {
       name: string;
@@ -25,7 +26,7 @@ export const NarutoCard: React.FC<CardType> = (props) => {
       <Row
         justify="center"
         align="middle"
-        gutter={8}
+        // gutter={8}
         style={{ height: "100vh" }}
       >
         <Col>
