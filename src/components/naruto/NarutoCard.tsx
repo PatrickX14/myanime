@@ -1,7 +1,7 @@
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { Card, Row, Image, Col } from "antd";
 import React from "react";
-import { NartuoPropsType } from "../pages/naruto/Naruto";
+import { NartuoPropsType } from "../../pages/naruto/Naruto";
 
 interface CardType extends NartuoPropsType {
   data: {

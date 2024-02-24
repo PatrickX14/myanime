@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import { NarutoCard } from "../../components/NarutoCard";
+import { NarutoCard } from "../../components/naruto/NarutoCard";
 
 export interface NartuoPropsType {
   type: "clan" | "singlecharacter" | "multiplecharacter";

@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { PokemonLoader, PokemonPage } from "./pages/Pokemon";
+import { PokemonPage } from "./pages/pokemon/Pokemon";
 import { NartuoLoader, NarutoPage } from "./pages/naruto/Naruto";
 import { WebTemplate } from "./pages/WebTemplate";
 
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/pokemon",
-        loader: PokemonLoader,
+        // loader: PokemonLoader,
         element: <PokemonPage />,
       },
       {
