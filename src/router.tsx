@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { PokemonLoader, PokemonPage } from "./pages/Pokemon";
 import { NartuoLoader, NarutoPage } from "./pages/naruto/Naruto";
-import { WebTemplate } from "./pages/WebsiteTemplate";
+import { WebTemplate } from "./pages/WebTemplate";
 
 export const router = createBrowserRouter([
   {
@@ -28,7 +28,7 @@ export const router = createBrowserRouter([
           {
             path: "multiplecharacter",
             loader: NartuoLoader,
-            element: <NarutoPage type="singlecharacter" />,
+            element: <NarutoPage type="multiplecharacter" />,
           },
         ],
       },
